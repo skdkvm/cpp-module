@@ -2,12 +2,12 @@
 
 ClapTrap::ClapTrap() : HP(10), EP(10), AD(0)
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "ClapTrap Default constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &ref)
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "ClapTrap &ref Default constructor called" << std::endl;
 	*this = ref;
 }
 
@@ -19,7 +19,7 @@ ClapTrap::ClapTrap(std::string name) : name(name), HP(10), EP(10), AD(0)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "ClapTrap" << name << " " << "destructor called" << std::endl;
+	std::cout << "ClapTrap " << name << " " << "destructor called" << std::endl;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &ref)
@@ -51,16 +51,16 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	{
 		HP = HP - amount;
 		if (HP < 0)
-			HP = 0;
+				HP = 0;
 		std::cout << name << " HP = " << HP << std::endl;
 		if (HP == 0)
-			std::cout << name << " Die " << std::endl; 
+			std::cout << "ClapTrap (" << name << ") Die " << std::endl; 
 	}
 	else
-		std::cout << name << " Die " << std::endl;
+		std::cout << "ClapTrap (" << name << ") Die " << std::endl;
 }
 
-void	ClapTrap::beRecaired(unsigned int amount)
+void	ClapTrap::beRepaired(unsigned int amount)
 {
 	HP = HP + amount;
 	std::cout << "ClapTrap (" << name

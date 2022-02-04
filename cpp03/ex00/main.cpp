@@ -10,10 +10,10 @@ int	main(void)
 
 	p1.attack(Two);
 	p2.takeDamage(10);
-	p2.beRecaired(3);
+	p2.beRepaired(3);
 	p2.attack(One);
 	p1.takeDamage(5);
-	p1.beRecaired(15);
+	p1.beRepaired(15);
 	
 	return (0);
 }

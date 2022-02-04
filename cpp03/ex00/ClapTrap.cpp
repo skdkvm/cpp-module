@@ -60,7 +60,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 		std::cout << name << " Die " << std::endl;
 }
 
-void	ClapTrap::beRecaired(unsigned int amount)
+void	ClapTrap::beRepaired(unsigned int amount)
 {
 	HP = HP + amount;
 	std::cout << "ClapTrap (" << name

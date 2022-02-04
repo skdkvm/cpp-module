@@ -20,7 +20,7 @@ class ClapTrap
 		ClapTrap &operator=(const ClapTrap &ref);
 		void	attack(std::string const &target);
 		void	takeDamage(unsigned int amount);
-		void	beRecaired(unsigned int amount);
+		void	beRepaired(unsigned int amount);
 };
 
 #endif
