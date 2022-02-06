@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: seonggki <seonggki@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/05 18:22:12 by seonggki          #+#    #+#             */
+/*   Updated: 2022/02/05 18:22:24 by seonggki         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "FragTrap.hpp"
 
 FragTrap::FragTrap()
@@ -5,7 +17,7 @@ FragTrap::FragTrap()
 	this->HP = 100;
 	this->EP = 100;
 	this->AD = 30;
-	std::cout << "FragTrap defalut constructor called" << std::endl;
+	std::cout << Green << "FragTrap (Child) defalut constructor called" << Reset << std::endl;
 }
 
 FragTrap::FragTrap(std::string name)
@@ -14,36 +26,33 @@ FragTrap::FragTrap(std::string name)
 	this->HP = 100;
 	this->EP = 50;
 	this->AD = 30;
-	std::cout << "FragTrap constructor called with string" << std::endl;
+	std::cout << Green << "FragTrap (Child) constructor called with string" << Reset << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap &ref)
 {
-	std::cout << "FragTrap Copy constructor called" << std::endl;
 	*this = ref;
+	std::cout << Green << "FragTrap (Child) Copy constructor called" << Reset << std::endl;
 }
 
 FragTrap::~FragTrap()
 {
-	std::cout << "FragTrap (" << name << ") " << "destructor called" << std::endl;
+	std::cout << Red << "FragTrap (" << name << ") " << "destructor called"<< Reset << std::endl;
 }
 
 FragTrap &FragTrap::operator=(const FragTrap &ref)
 {
-	std::cout	<< "FragTrap " << name << " is copied from " << ref.name << std::endl;
-	if (this != &ref)
-	{
-		HP = ref.HP;
-		EP = ref.EP;
-		AD = ref.AD;
-		name = ref.name;
-	}
+	std::cout << "FragTrap " << name << " is copied from " << ref.name << std::endl;
+	this->HP = ref.HP;
+	this->EP = ref.EP;
+	this->AD = ref.AD;
+	this->name = ref.name;
 	return *this;
 }
 
 void	FragTrap::highFivesGuys(void)
 {
-	std::cout << "FragTrap <" << name << "> say : " << "Hey, Guys! HighFive with me!" << std::endl;
+	std::cout<< Cyan << "FragTrap <" << name << "> say : " << "Hey, Guys! HighFive with me!" << Reset << std::endl;
 }
 
 void	FragTrap::attack(std::string const &target)
@@ -52,7 +61,5 @@ void	FragTrap::attack(std::string const &target)
 	{
 		std::cout << "FragTrap (" << name << ") can't attack, because it's already dead" << std::endl;
 	}
-	std::cout << "FragTrap (" << name
-	<< ") attack (" << target << "), causing ("
-	<< AD << ") points of damage !" << std::endl;
+	std::cout << "FragTrap (" << name << ") attack (" << target << "), causing (" << AD << ") points of damage !" << std::endl;
 }

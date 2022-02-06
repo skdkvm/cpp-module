@@ -9,7 +9,7 @@ int	main(void)
 	p2 = ClapTrap(Two);
 
 	p1.attack(Two);
-	p2.takeDamage(10);
+	p2.takeDamage(20);
 	p2.beRepaired(3);
 	p2.attack(One);
 	p1.takeDamage(5);

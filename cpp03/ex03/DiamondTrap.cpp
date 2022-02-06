@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seonggki <seonggki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/27 15:34:14 by seonggki          #+#    #+#             */
-/*   Updated: 2022/02/05 15:33:09 by seonggki         ###   ########.fr       */
+/*   Created: 2022/02/05 15:47:07 by seonggki          #+#    #+#             */
+/*   Updated: 2022/02/05 16:04:25 by seonggki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
+#include "DiamondTrap.hpp"
 
-HumanA::HumanA(std::string name, Weapon &weapon) : name(name), weapon(weapon)
+DiamondTrap::DiamondTrap()
 {
-	
+
 }
 
-HumanA::~HumanA()
+DiamondTrap::DiamondTrap(std::string name)
 {
+
 }
 
-void    HumanA::attack(void)
+DiamondTrap::DiamondTrap(const DiamondTrap &ref)
 {
-    std::cout << this->name << " attacks with his " << weapon.getType() << std::endl;
+
+}
+
+DiamondTrap::~DiamondTrap()
+{
+
+}
+
+DiamondTrap& DiamondTrap::operator=(const DiamondTrap &ref)
+{
+    
 }
