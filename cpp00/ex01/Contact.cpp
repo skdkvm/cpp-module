@@ -53,7 +53,7 @@ static void printTenChar(std::string str)
 
 void    Contact::displayContact(void) const
 {
-    printTenChar(std::to_string(index));
+    printTenChar(ft_stoi(index));
     std::cout << "|";
     printTenChar(first_name);
     std::cout << "|";

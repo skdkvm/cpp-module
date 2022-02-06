@@ -14,6 +14,7 @@
 # define CONTACT_HPP
 # include <iostream>
 # include <string>
+# include <sstream>
 # include <iomanip>
 
 class Contact
@@ -33,6 +34,5 @@ class Contact
                 void    displayContact(void) const;
                 void    displayContactDetails(void) const;
 };
-
 
 #endif
