@@ -6,7 +6,7 @@
 /*   By: seonggki <seonggki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 15:34:23 by seonggki          #+#    #+#             */
-/*   Updated: 2022/01/29 18:36:52 by seonggki         ###   ########.fr       */
+/*   Updated: 2022/02/07 01:01:06 by seonggki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ private:
     Weapon *weapon;
 public:
     HumanB(std::string name);
-    void    setWeapon(Weapon *weapon);
+    void    setWeapon(Weapon &weapon);
     void    attack(void);
     ~HumanB();
 };
