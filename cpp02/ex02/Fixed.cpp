@@ -5,12 +5,12 @@ Fixed::Fixed() : fx(0)
 	return ;
 }
 
-Fixed::Fixed(int num)
+Fixed::Fixed(const int num)
 {
 	fx = num << bit;
 }
 
-Fixed::Fixed(float fnum)
+Fixed::Fixed(const float fnum)
 {
 	fx = ((int)roundf(fnum * (1 << bit)));
 }
