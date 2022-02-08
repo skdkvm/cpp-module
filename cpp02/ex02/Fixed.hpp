@@ -13,8 +13,8 @@ class Fixed
 	
 	public:
 		Fixed();
-		Fixed(int num);
-		Fixed(float fnum);
+		Fixed(const int num);
+		Fixed(const float fnum);
 		Fixed(const Fixed &fixed);
 		Fixed	&operator=(const Fixed &fixed);
 		//비교 연산자(>, <, >=, <=, ==, !=)

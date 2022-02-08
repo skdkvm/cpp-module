@@ -6,13 +6,13 @@ Fixed::Fixed() : fx(0)
 	return ;
 }
 
-Fixed::Fixed(int num)
+Fixed::Fixed(const int num)
 {
 	std::cout << "Int constructor called" << std::endl;
 	fx = num << bit;
 }
 
-Fixed::Fixed(float fnum)
+Fixed::Fixed(const float fnum)
 {
 	std::cout << "Float constructor called" << std::endl;
 	fx = ((int)roundf(fnum * (1 << bit)));
