@@ -6,7 +6,7 @@
 /*   By: seonggki <seonggki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 15:47:03 by seonggki          #+#    #+#             */
-/*   Updated: 2022/02/05 18:21:48 by seonggki         ###   ########.fr       */
+/*   Updated: 2022/02/09 16:32:35 by seonggki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ class ClapTrap
 		void	attack(std::string const &target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
+		unsigned int	getDamage(void) const;
 };
 
 #endif

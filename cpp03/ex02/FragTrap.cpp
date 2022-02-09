@@ -6,7 +6,7 @@
 /*   By: seonggki <seonggki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 18:22:14 by seonggki          #+#    #+#             */
-/*   Updated: 2022/02/05 18:22:15 by seonggki         ###   ########.fr       */
+/*   Updated: 2022/02/09 16:24:21 by seonggki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	FragTrap::highFivesGuys(void)
 
 void	FragTrap::attack(std::string const &target)
 {
-	if (HP == 0)
+	if (EP == 0)
 	{
 		std::cout << "FragTrap (" << name << ") can't attack, because it's already dead" << std::endl;
 	}

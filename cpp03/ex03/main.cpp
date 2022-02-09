@@ -5,22 +5,55 @@
 
 int	main(void)
 {
-	std::string	One = "one";
-	std::string Two = "two";
-	ScavTrap	p1(One);
-	FragTrap	p2;
-	p2 = FragTrap(Two);
+	DiamondTrap	p1("One");
 
-	p1.attack(Two);
-	p2.takeDamage(20);
-	p2.beRepaired(3);
+	std::cout << std::endl;
+	p1.whoAmI();
+	std::cout << std::endl;
 	
-	p2.attack(One);
-	p1.takeDamage(30);
-	p1.beRepaired(15);
+	{
+		DiamondTrap p2("Two");
+		DiamondTrap p3("Three");
+
+		std::cout << std::endl;
+		
+		p2.whoAmI();
+		p3.whoAmI();		
+		p3.highFivesGuys();
+		
+		std::cout << std::endl;
+		
+		p2.attack("Three");
+		p3.takeDamage(p2.getDamage());
+		
+		std::cout << std::endl;
+		
+		p3.attack("Two");
+		p2.takeDamage(p3.getDamage());
+		
+		std::cout << std::endl;
+		
+		p2.guardGate();
+		
+		std::cout << std::endl;
+	}
+
+	std::cout << std::endl;
 	
-	p1.guardGate();
-	p2.highFivesGuys();
+	DiamondTrap p4;
 	
+	std::cout << std::endl;
+	
+	p4.whoAmI();
+	
+	std::cout << std::endl;
+
+	p4 = p1;
+	
+	std::cout << std::endl;
+	
+	p4.whoAmI();
+	
+	std::cout << std::endl;
 	return (0);
 }

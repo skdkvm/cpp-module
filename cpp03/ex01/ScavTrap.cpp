@@ -40,7 +40,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &ref)
 
 void	ScavTrap::attack(std::string const &target)
 {
-	if (HP == 0)
+	if (EP == 0)
 	{
 		std::cout << "ScavTrap (" << name << ") can't attack, because it's already dead" << std::endl;
 	}

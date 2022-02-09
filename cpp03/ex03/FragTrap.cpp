@@ -6,7 +6,7 @@
 /*   By: seonggki <seonggki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 18:22:12 by seonggki          #+#    #+#             */
-/*   Updated: 2022/02/05 18:22:24 by seonggki         ###   ########.fr       */
+/*   Updated: 2022/02/09 17:12:25 by seonggki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ FragTrap::FragTrap()
 	this->HP = 100;
 	this->EP = 100;
 	this->AD = 30;
-	std::cout << Green << "FragTrap (Child) defalut constructor called" << Reset << std::endl;
+	std::cout << Yellow << "FragTrap (Child) defalut constructor called" << Reset << std::endl;
 }
 
 FragTrap::FragTrap(std::string name)
@@ -26,13 +26,13 @@ FragTrap::FragTrap(std::string name)
 	this->HP = 100;
 	this->EP = 50;
 	this->AD = 30;
-	std::cout << Green << "FragTrap (Child) constructor called with string" << Reset << std::endl;
+	std::cout << Yellow << "FragTrap (Child) constructor called with string" << Reset << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap &ref)
 {
 	*this = ref;
-	std::cout << Green << "FragTrap (Child) Copy constructor called" << Reset << std::endl;
+	std::cout << Yellow << "FragTrap (Child) Copy constructor called" << Reset << std::endl;
 }
 
 FragTrap::~FragTrap()
@@ -57,7 +57,7 @@ void	FragTrap::highFivesGuys(void)
 
 void	FragTrap::attack(std::string const &target)
 {
-	if (HP == 0)
+	if (EP == 0)
 	{
 		std::cout << "FragTrap (" << name << ") can't attack, because it's already dead" << std::endl;
 	}

@@ -1,5 +1,5 @@
 NAME		=	ScavTrap
-CP			=	clang++ -std=c++98
+CP			=	c++ -std=c++98
 CPFLAGS		=	-Wall -Wextra -Werror
 
 SRC			=	main.cpp \

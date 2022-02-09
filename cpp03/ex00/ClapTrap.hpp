@@ -15,7 +15,7 @@
 # define Purple           "\e[35m"
 # define Brown            "\e[33m"
 # define Gray             "\e[37m"
-# define Dark Gray        "\e[30m"
+# define DarkGray         "\e[30m"
 # define Yellow           "\e[33m"
 # define White            "\e[37m"
 # define Reset            "\e[0m"
@@ -37,6 +37,7 @@ class ClapTrap
 		void	attack(std::string const &target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
+		unsigned int	getDamage(void) const;
 };
 
 #endif

@@ -1,4 +1,4 @@
-NAME		=	DiamondTrap
+NAME		=	Animal
 CP			=	c++ -std=c++98
 CPFLAGS		=	-Wall -Wextra -Werror
 

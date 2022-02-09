@@ -6,7 +6,7 @@
 /*   By: seonggki <seonggki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 18:22:55 by seonggki          #+#    #+#             */
-/*   Updated: 2022/02/05 18:22:56 by seonggki         ###   ########.fr       */
+/*   Updated: 2022/02/09 16:33:37 by seonggki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &ref)
 
 void	ScavTrap::attack(std::string const &target)
 {
-	if (HP == 0)
+	if (EP == 0)
 	{
 		std::cout << "ScavTrap (" << name << ") can't attack, because it's already dead" << std::endl;
 	}

@@ -6,7 +6,7 @@
 /*   By: seonggki <seonggki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 15:47:05 by seonggki          #+#    #+#             */
-/*   Updated: 2022/02/05 18:29:11 by seonggki         ###   ########.fr       */
+/*   Updated: 2022/02/09 16:48:42 by seonggki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ class DiamondTrap : public ScavTrap , public FragTrap
         DiamondTrap(const DiamondTrap &ref);
         ~DiamondTrap();
         DiamondTrap& operator=(const DiamondTrap &ref);
+        void whoAmI();
+        void	attack(std::string const &target);
+        unsigned int	getDamage(void) const;
 };
 
 #endif

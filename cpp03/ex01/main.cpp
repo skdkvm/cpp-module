@@ -10,10 +10,10 @@ int	main(void)
 	p2 = ScavTrap(Two);
 
 	p1.attack(Two);
-	p2.takeDamage(20);
+	p2.takeDamage(p1.getDamage());
 	p2.beRepaired(3);
 	p2.attack(One);
-	p1.takeDamage(20);
+	p1.takeDamage(p2.getDamage());
 	p1.beRepaired(10);
 	
 	p1.guardGate();
