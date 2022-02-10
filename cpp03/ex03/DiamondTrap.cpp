@@ -6,7 +6,7 @@
 /*   By: seonggki <seonggki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 15:47:07 by seonggki          #+#    #+#             */
-/*   Updated: 2022/02/09 17:14:27 by seonggki         ###   ########.fr       */
+/*   Updated: 2022/02/10 19:41:30 by seonggki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,7 @@ void    DiamondTrap::whoAmI()
 
 void	DiamondTrap::attack(std::string const &target)
 {
-	if (EP == 0)
-	{
-		std::cout << "DiamondTrap(Multiple) (" << name << ") can't attack, because it's already dead" << std::endl;
-	}
-	std::cout << "DiamondTrap(Multiple) (" << name << ") attack (" << target << "), causing (" << AD << ") points of damage !" << std::endl;
+	ScavTrap::attack(target);
 }
 
 unsigned int	DiamondTrap::getDamage(void) const
