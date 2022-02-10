@@ -6,7 +6,7 @@
 /*   By: seonggki <seonggki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 18:22:14 by seonggki          #+#    #+#             */
-/*   Updated: 2022/02/09 16:24:21 by seonggki         ###   ########.fr       */
+/*   Updated: 2022/02/10 18:49:52 by seonggki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ FragTrap::~FragTrap()
 
 FragTrap &FragTrap::operator=(const FragTrap &ref)
 {
-	std::cout << "FragTrap " << name << " is copied from " << ref.name << std::endl;
+	std::cout << "FragTrap is copied from " << ref.name << std::endl;
 	this->HP = ref.HP;
 	this->EP = ref.EP;
 	this->AD = ref.AD;

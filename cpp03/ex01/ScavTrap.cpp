@@ -30,7 +30,7 @@ ScavTrap::~ScavTrap()
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &ref)
 {
-	std::cout << "ScavTrap " << name << " is copied from " << ref.name << std::endl;
+	std::cout << "ScavTrap is copied from " << ref.name << std::endl;
 	this->name = ref.name;
 	this->HP = ref.HP;
 	this->EP = ref.EP;
