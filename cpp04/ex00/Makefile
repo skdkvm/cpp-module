@@ -1,6 +1,6 @@
 NAME		=	Animal
-CP			=	c++ -std=c++98
-CPFLAGS		=	-Wall -Wextra -Werror
+CXX			=	c++ -std=c++98
+CXXFLAGS	=	-Wall -Wextra -Werror
 
 SRC			=	main.cpp \
 				Dog.cpp \
@@ -13,10 +13,10 @@ RM			=	rm -rf
 OBJ			=	$(SRC:.cpp=.o)
 
 %.o			:	%.cpp
-				$(CP) $(CPFLAGS) -c $< -o $@
+				$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(NAME)		:	$(OBJ)
-				$(CP) $(CPFLAGS) $(OBJ) -o $(NAME)
+				$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 all			:	$(NAME)
 
