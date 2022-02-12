@@ -53,11 +53,7 @@ void    DiamondTrap::whoAmI()
 
 void	DiamondTrap::attack(std::string const &target)
 {
-	if (EP == 0)
-	{
-		std::cout << "DiamondTrap(Multiple) (" << name << ") can't attack, because it's already dead" << std::endl;
-	}
-	std::cout << "DiamondTrap(Multiple) (" << name << ") attack (" << target << "), causing (" << AD << ") points of damage !" << std::endl;
+	ScavTrap::attack(target);
 }
 
 unsigned int	DiamondTrap::getDamage(void) const

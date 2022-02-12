@@ -1,6 +1,6 @@
 NAME		=	DiamondTrap
 CP			=	c++ -std=c++98
-CPFLAGS		=	-Wall -Wextra -Werror
+//CPFLAGS		=	-Wall -Wextra -Werror
 
 SRC			=	main.cpp \
 				ClapTrap.cpp \
