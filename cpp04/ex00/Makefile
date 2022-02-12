@@ -3,10 +3,9 @@ CP			=	c++ -std=c++98
 CPFLAGS		=	-Wall -Wextra -Werror
 
 SRC			=	main.cpp \
-				ClapTrap.cpp \
-				ScavTrap.cpp \
-				FragTrap.cpp \
-				DiamondTrap.cpp
+				Dog.cpp \
+				Cat.cpp \
+				Animal.cpp
 				
 
 RM			=	rm -rf
