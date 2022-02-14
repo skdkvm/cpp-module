@@ -13,7 +13,7 @@ int	main()
 	const Animal*	i = new Cat();
 	const WrongAnimal*	w = new WrongCat();
 
-	std::cout << "\n------- test Animal---------" << std::endl;
+	std::cout << Blue << "\n------- test Animal---------" << Reset <<std::endl;
 
 	std::cout << j->getType() << " " << std::endl;
 	std::cout << i->getType() << " " << std::endl;
@@ -22,10 +22,10 @@ int	main()
 	i->makeSound();
 	j->makeSound();
 	meta->makeSound();
-	std::cout << "\n----- test Wrong Animal-------" << std::endl;
+	std::cout << Blue << "\n----- test Wrong Animal-------" << Reset << std::endl;
 	std::cout << w->getType() << " " << std::endl;
 	w->makeSound();
-	std::cout << "\n----- test end-------" << std::endl;
+	std::cout << Blue << "\n----- test end-------" << Reset << std::endl;
 
 	delete j;
 	delete i;

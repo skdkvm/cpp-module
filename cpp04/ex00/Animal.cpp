@@ -2,12 +2,13 @@
 
 Animal::Animal()
 {
-	std::cout << "Animal default constructor called" << std::endl;
+	std::cout << Green << "Animal default constructor called" << Reset <<std::endl;
 	type = "Animal";
 }
 
 Animal::Animal(const Animal &ref)
 {
+	std::cout << Green << "Animal Copy constructor called" << Reset <<std::endl;
 	*this = ref;
 }
 
@@ -19,7 +20,7 @@ Animal& Animal::operator=(const Animal &ref)
 
 Animal::~Animal()
 {
-	std::cout << "Animal destructor called" << std::endl;
+	std::cout << Red << "Animal destructor called" << Reset << std::endl;
 }
 
 std::string Animal::getType() const
