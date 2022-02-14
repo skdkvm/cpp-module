@@ -1,11 +1,13 @@
-NAME		=	Animal
+NAME		=	Polymorphism
 CXX			=	c++ -std=c++98
 CXXFLAGS	=	-Wall -Wextra -Werror
 
 SRC			=	main.cpp \
-				Dog.cpp \
+				Animal.cpp \
 				Cat.cpp \
-				Animal.cpp
+				Dog.cpp \
+				WrongAnimal.cpp \
+				WrongCat.cpp
 				
 
 RM			=	rm -rf

@@ -3,13 +3,15 @@
 
 class WrongAnimal
 {
-    private:
-        /* data */
+    protected:
+        std::string type;
     public:
-        WrongAnimal(/* args*/);
+        WrongAnimal();
         WrongAnimal(const WrongAnimal &ref);
         ~WrongAnimal();
         WrongAnimal& operator=(const WrongAnimal &ref);
+		void	makeSound() const;
+		std::string getType() const;
 };
 
 #endif
