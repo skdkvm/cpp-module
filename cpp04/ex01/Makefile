@@ -1,6 +1,6 @@
 NAME		=	Deep
 CXX			=	c++ -std=c++98
-CXXFLAGS	=	-Wall -Wextra -Werror
+//CXXFLAGS	=	-Wall -Wextra -Werror
 
 SRC			=	main.cpp \
 				Brain.cpp \

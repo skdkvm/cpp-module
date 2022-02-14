@@ -1,46 +1,45 @@
+#include <iomanip>
 #include "Cat.hpp"
 #include "Dog.hpp"
 #include "Animal.hpp"
 
+
 int	main()
 {
-	Animal *Ani[4];
+	Animal *A[4];
 	for (int i = 0; i < 4; i++) {
 		if (i % 2 == 0) {
-			Ani[i] = new Dog();	
+			A[i] = new Dog();	
 		}
 		else {
-			Ani[i] = new Cat();
+			A[i] = new Cat();
 		}
 	}
 
-	std::cout << "--------test 1 start----------" << std::endl;
+	std::cout << Yellow << "--------test 1 start----------" << Reset << std::endl;
 	
 	for (int i = 0; i < 4; i++) {
-		std::cout << Ani[i]->getType() << " : ";
-		Ani[i]->makeSound();
+		std::cout << A[i]->getType() << " : ";
+		A[i]->makeSound();
 	}
 	
 	for (int i = 0; i < 4; i++) {
-		delete Ani[i];
+		delete A[i];
 	}
-	std::cout << "--------test 1 end----------" << std::endl;
+	std::cout << Yellow << "--------test 1 end----------" << Reset << std::endl;
 
 	Dog test;
 	Dog	temp = test;
 
 	std::cout << "test : ";
-	test.showBrain();
+	test.printIdeas();
 	std::cout << "temp : ";
-	temp.showBrain();
-
-	std::cout << "\nsetting brain" << std::endl;
-	test.resetBrain();
+	temp.printIdeas();
 
 	std::cout << "test : ";
-	test.showBrain();
+	test.printIdeas();
 	std::cout << "temp : ";
-	temp.showBrain();
+	temp.printIdeas();
 	std::cout << "\ntesting end" << std::endl;
 	
 	system("leaks Deep");
