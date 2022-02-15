@@ -16,7 +16,7 @@ Dog::Dog(const Dog &ref)
 
 Dog& Dog::operator=(const Dog &ref)
 {
-	this->d_brain = ref.d_brain;
+	this->d_brain = new Brain(*ref.d_brain);
 	this->type = ref.type;
 	return *this;
 }
