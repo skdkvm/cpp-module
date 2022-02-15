@@ -37,3 +37,8 @@ void	Dog::printIdeas(void) const
 	this->d_brain->printFirstIdeas();
 	std::cout << " at " << &this->d_brain << std::endl;
 }
+
+void	Dog::resetBrain() const
+{
+	this->d_brain->setIdeas();
+}

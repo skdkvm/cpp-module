@@ -35,6 +35,14 @@ int	main()
 	test.printIdeas();
 	std::cout << "Temp Deep Copy : ";
 	temp.printIdeas();
+	
+	std::cout << "resetting brain" << std::endl;
+	test.resetBrain();
+	
+	std::cout << "Test Shallow Copy : ";
+	test.printIdeas();
+	std::cout << "Temp Deep Copy : ";
+	temp.printIdeas();
 
 	std::cout << "\ntesting end" << std::endl;
 	

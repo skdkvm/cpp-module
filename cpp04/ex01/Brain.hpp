@@ -27,6 +27,7 @@ class Brain
 	
 		Brain& operator=(const Brain &ref);
 		void	printFirstIdeas(void) const;
+		void	setIdeas();
 };
 
 #endif

@@ -7,7 +7,7 @@ Brain::Brain()
 	
 	for (int i = 0; i < 100; i++)
 	{
-		ideas[i] = random[std::rand() % sizeof(random)];
+		ideas[i] = random[rand() % sizeof(random)];
 	}
 }
 
@@ -37,4 +37,14 @@ Brain::~Brain()
 void	Brain::printFirstIdeas(void) const
 {
 	std::cout << Blue << "[Ideas] " << Reset << ideas[0] << "," << ideas[1] << "," << ideas[2] << "," << ideas[3] << "," << ideas[4] << ",... ";
-}	
+}
+
+void	Brain::setIdeas()
+{
+	std::string		random[] = {"cow cow", "KKKK KKKK", "Hi Hi", "Hello Hello", "Bang Bang"};
+	
+	for (int i = 0; i < 100; i++)
+	{
+		ideas[i] = random[i % 5];
+	}
+}

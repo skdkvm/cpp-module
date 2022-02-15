@@ -15,6 +15,7 @@ class Dog : public Animal
         Dog& operator=(const Dog &ref);
 		virtual void makeSound() const;
 		void	printIdeas(void) const;
+		void	resetBrain() const;
 };
 
 #endif
