@@ -1,12 +1,10 @@
-NAME		=	Deep
+NAME		=	Bureaucrat
 CXX			=	c++ -std=c++98
-CXXFLAGS	=	-Wall -Wextra -Werror
+//CXXFLAGS	=	-Wall -Wextra -Werror
 
 SRC			=	main.cpp \
-				Brain.cpp \
-				Animal.cpp \
-				Cat.cpp \
-				Dog.cpp
+				Bureaucrat.cpp \
+				
 
 RM			=	rm -rf
 

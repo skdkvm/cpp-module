@@ -1,4 +1,4 @@
-NAME		=	Deep
+NAME		=	Abstract
 CXX			=	c++ -std=c++98
 CXXFLAGS	=	-Wall -Wextra -Werror
 
