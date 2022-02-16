@@ -1,10 +1,13 @@
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(){}
+Bureaucrat::Bureaucrat()
+{
+	std::cout << Green << "Bureaucrat Default Constructor called" << Reset << std::endl;
+}
 
 Bureaucrat::Bureaucrat(std::string name, const int grade) : name(name)
 {
-	std::cout << Green << "Bureaucrat defalt Constructor with param called" << Reset << std::endl;
+	std::cout << Green << "Bureaucrat string Constructor called" << Reset << std::endl;
 	try
 	{
 		if (grade < 1)
@@ -19,7 +22,7 @@ Bureaucrat::Bureaucrat(std::string name, const int grade) : name(name)
 	}
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &ref)
+Bureaucrat::Bureaucrat(const Bureaucrat &ref) : name(ref.name)
 {
 	std::cout << Green << "Bureaucrat Copy Constructor called" << Reset << std::endl;
 	*this = ref;
@@ -50,6 +53,7 @@ int	Bureaucrat::getGrade() const
 void	Bureaucrat::increaseGrade()
 {
 	std::cout << Yellow << "increaseGrade  called" << Reset << std::endl;
+	this->grade--;
 	try
 	{
 		if (grade < 1)
@@ -59,12 +63,12 @@ void	Bureaucrat::increaseGrade()
 	{
 		std::cout << Blue << e.what() << Reset << std::endl;
 	}
-	this->grade--;
 }
 
 void	Bureaucrat::decreaseGrade()
 {
 	std::cout << Yellow << "decreaseGrade  called" << Reset << std::endl;
+	this->grade++;
 	try
 	{
 		if (grade > 150)
@@ -74,17 +78,28 @@ void	Bureaucrat::decreaseGrade()
 	{
 		std::cout << Blue << e.what() << Reset << std::endl;
 	}
-	this->grade++;
+}
+
+void	Bureaucrat::signForm(Form &f)
+{
+	if (f.getSign() == true)
+	{
+		std::cout << "< " << name << " > signs < " << f.getName() << " >" << std::endl;	
+	}
+	else
+	{
+		std::cout << "< " << name << " > cannot sign < " << f.getName() << " >  because < Grade is low >" << std::endl;	
+	}
 }
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
-	return "BureaucratException: Grade too High";
+	return "BureaucratException: Grade too High\n";
 }
 
 const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
-	return "BureaucratException: Grade too Low";
+	return "BureaucratException: Grade too Low\n";
 }
 
 std::ostream& operator<<(std::ostream& o, const Bureaucrat& ref)

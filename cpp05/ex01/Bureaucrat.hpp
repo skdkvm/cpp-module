@@ -6,6 +6,8 @@
 # include <iomanip>
 # include <exception>
 
+# include "Form.hpp"
+
 # define Black            "\e[30m"
 # define Blue             "\e[34m"
 # define Green            "\e[32m"
@@ -16,6 +18,8 @@
 # define Yellow           "\e[33m"
 # define White            "\e[37m"
 # define Reset            "\e[0m"
+
+class Form;
 
 class Bureaucrat
 {
@@ -34,6 +38,7 @@ class Bureaucrat
 		int			getGrade() const;
 		void		increaseGrade();
 		void		decreaseGrade();
+		void	signForm(Form &f);
 	
 		class	GradeTooHighException : public std::exception
 		{

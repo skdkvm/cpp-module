@@ -1,6 +1,9 @@
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(){}
+Bureaucrat::Bureaucrat()
+{
+	std::cout << Green << "Bureaucrat Default Constructor called" << Reset << std::endl;
+}
 
 Bureaucrat::Bureaucrat(std::string name, const int grade) : name(name)
 {
@@ -50,6 +53,7 @@ int	Bureaucrat::getGrade() const
 void	Bureaucrat::increaseGrade()
 {
 	std::cout << Yellow << "increaseGrade  called" << Reset << std::endl;
+	this->grade--;
 	try
 	{
 		if (grade < 1)
@@ -58,23 +62,24 @@ void	Bureaucrat::increaseGrade()
 	catch (std::exception& e)
 	{
 		std::cout << Blue << e.what() << Reset << std::endl;
+		this->grade = 1;
 	}
-	this->grade--;
 }
 
 void	Bureaucrat::decreaseGrade()
 {
 	std::cout << Yellow << "decreaseGrade  called" << Reset << std::endl;
+	this->grade++;
 	try
 	{
 		if (grade > 150)
-			throw (GradeTooHighException());
+			throw (GradeTooLowException());
 	}
 	catch (std::exception& e)
 	{
 		std::cout << Blue << e.what() << Reset << std::endl;
+		this->grade = 150;
 	}
-	this->grade++;
 }
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()

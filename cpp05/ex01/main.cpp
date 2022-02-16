@@ -1,35 +1,38 @@
+
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int		main()
 {
-	std::cout << "================= Constructor =================|" << std::endl;
-	Bureaucrat a("test1", 0);
-	Bureaucrat b("test2", 151);
-	Bureaucrat c("test3", 10);
-	Bureaucrat d("test4", 1);
-	Bureaucrat e("test5", 150);
-	std::cout << "===============================================\n" << std::endl;
-	std::cout << "================== Test Line ==================|" << std::endl;
-	std::cout << "\n<< c test3 >>" << std::endl;
-	std::cout << c << std::endl;
-	c.increaseGrade();
-	std::cout << c << std::endl;
-	c.decreaseGrade();
-	std::cout << c << std::endl;
-	std::cout << "\n<< d test4 >>" << std::endl;
-	std::cout << d << std::endl;
-	d.increaseGrade();
-	std::cout << d << std::endl;
-	d.decreaseGrade();
-	std::cout << d << std::endl;
-	std::cout << "\n<< e test5 >>" << std::endl;
-	std::cout << e << std::endl;
-	e.decreaseGrade();
-	std::cout << e << std::endl;
-	e.increaseGrade();
-	std::cout << e << std::endl;
-	std::cout << "================== Test End  ==================|\n" << std::endl;
-	std::cout << "=================  Destructor =================|" << std::endl;
+	Form doc1("doc1", 100, 70);
+	Form doc2("doc2", 70, 30);
+	Bureaucrat ylee("ylee", 80);
+
+	std::cout << doc1 << std::endl;
+	std::cout << doc2 << std::endl;
+	std::cout << ylee << std::endl;
+	std::cout << "===== ylee want sign doc1 =====\n\n";
+	ylee.signForm(doc1);
+	try
+	{
+		doc1.beSigned(ylee);
+	}
+	catch (std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << doc1 << std::endl;
+	std::cout << "===== ylee want sign doc2 =====\n\n";
+	ylee.signForm(doc2);
+	try
+	{
+		doc2.beSigned(ylee);
+	}
+	catch (std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << doc2 << std::endl;
 
 	return (0);
 }

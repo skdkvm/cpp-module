@@ -1,10 +1,10 @@
-NAME		=	Bureaucrat
+NAME		=	Form
 CXX			=	c++ -std=c++98
-//CXXFLAGS	=	-Wall -Wextra -Werror
+CXXFLAGS	=	-Wall -Wextra -Werror
 
 SRC			=	main.cpp \
 				Bureaucrat.cpp \
-				
+				Form.cpp
 
 RM			=	rm -rf
 
