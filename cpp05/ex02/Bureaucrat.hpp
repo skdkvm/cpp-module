@@ -5,6 +5,7 @@
 # include <string>
 # include <iomanip>
 # include <exception>
+# include <cstdlib>
 
 # include "Form.hpp"
 
@@ -26,27 +27,29 @@ class Bureaucrat
 	private:
 		const std::string name;
 		int	grade;
+		Bureaucrat();
 		
 	public:
-		Bureaucrat();
 		Bureaucrat(const std::string name, const int grade);
 		Bureaucrat(const Bureaucrat &ref);
 		~Bureaucrat();
 	
 		Bureaucrat& operator=(const Bureaucrat &ref);
+	
 		std::string	getName() const;
 		int			getGrade() const;
 		void		increaseGrade();
 		void		decreaseGrade();
 		void		signForm(Form &f);
-	
+		void		executeForm(Form const & f);
+
 		class	GradeTooHighException : public std::exception
 		{
 			const char* what() const throw();
 		};
 		class	GradeTooLowException : public std::exception
 		{
-			const char* what() const throw();			
+			const char* what() const throw();
 		};
 };
 

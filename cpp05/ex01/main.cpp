@@ -4,35 +4,35 @@
 
 int		main()
 {
-	Form doc1("doc1", 100, 70);
-	Form doc2("doc2", 70, 30);
-	Bureaucrat ylee("ylee", 80);
+	Form F1("F1", 100, 70);
+	Form F2("F2", 70, 30);
+	Bureaucrat B("B", 80);
 
-	std::cout << doc1 << std::endl;
-	std::cout << doc2 << std::endl;
-	std::cout << ylee << std::endl;
-	std::cout << "===== ylee want sign doc1 =====\n\n";
-	ylee.signForm(doc1);
+	std::cout << F1 << std::endl;
+	std::cout << F2 << std::endl;
+	std::cout << B << std::endl;
+	std::cout << "===== B want sign F1 =====\n\n";
+	B.signForm(F1);
 	try
 	{
-		doc1.beSigned(ylee);
+		F1.beSigned(B);
 	}
 	catch (std::exception& e)
 	{
 		std::cout << e.what() << std::endl;
 	}
-	std::cout << doc1 << std::endl;
-	std::cout << "===== ylee want sign doc2 =====\n\n";
-	ylee.signForm(doc2);
+	std::cout << F1 << std::endl;
+	std::cout << "===== B want sign F2 =====\n\n";
+	B.signForm(F2);
 	try
 	{
-		doc2.beSigned(ylee);
+		F2.beSigned(B);
 	}
 	catch (std::exception& e)
 	{
 		std::cout << e.what() << std::endl;
 	}
-	std::cout << doc2 << std::endl;
+	std::cout << F2 << std::endl;
 
 	return (0);
 }
