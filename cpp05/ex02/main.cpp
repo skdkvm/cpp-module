@@ -5,7 +5,7 @@
 int main ()
 {
 	//Bureaucrat	seonggki("seonggki", 150);
-	Bureaucrat	seonggki("seonggki", 0);
+	Bureaucrat	seonggki("seonggki", 1);
 	ShrubberyCreationForm	sh("home");
 	RobotomyRequestForm		ro("robot");
 	PresidentialPardonForm	pr("mint-chocolate");

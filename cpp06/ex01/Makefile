@@ -1,14 +1,10 @@
-NAME		=	execForms
+NAME		=	Serialization
 CXX			=	c++
 CXXFLAGS	=	-Wall -Wextra -Werror
 
-SRC			=	Bureaucrat.cpp \
-				Form.cpp \
-				PresidentialPardonForm.cpp \
-				RobotomyRequestForm.cpp \
-				ShrubberyCreationForm.cpp \
-				main.cpp
-
+SRC			=	Data.cpp \
+				main.cpp \
+				
 RM			=	rm -rf
 
 OBJ			=	$(SRC:.cpp=.o)

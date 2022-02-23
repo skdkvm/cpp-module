@@ -35,7 +35,7 @@ void	RobotomyRequestForm::execute(Bureaucrat const & executor) const
 	else if (executor.getGrade() > this->getExecGrade())
 		throw	GradeTooLowException();
 	std::cout << "Dddddddddd... Drrrrrrrr..." << std::endl;
-	if (std::rand() % 2 == 0)
+	if (std::rand() % 2 == 0) //srand가 추가되어야한다.
 		std::cout << "<" << getTarget() << "> has been robotomized successfully" << std::endl;
 	else
 		std::cout << "<" << getTarget() << "> has not been robotomized successfully" << std::endl;
