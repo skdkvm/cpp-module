@@ -108,7 +108,7 @@ void	Scalar::printFloat(float f)
 	if (f - static_cast<int>(f) == 0)
 	{
 		std::cout << Green << "float		:		" << f << ".0f" << Reset << std::endl;
-		std::cout << Green << "double		:		" << static_cast<double>(f) << Reset << std::endl;
+		std::cout << Green << "double		:		" << static_cast<double>(f) << ".0" << Reset << std::endl;
 	}
 	else
 	{
@@ -126,7 +126,7 @@ void	Scalar::printDouble(double d)
 	std::cout << Green << "int		:		" << static_cast<int>(d) << Reset << std::endl;
 	if (d - static_cast<int>(d) == 0)
 	{
-		std::cout << Green << "float		:		" << static_cast<float>(d) << "0.0f" << Reset << std::endl;
+		std::cout << Green << "float		:		" << static_cast<float>(d) << ".0f" << Reset << std::endl;
 		std::cout << Green << "double		:		" << d  << ".0" << Reset << std::endl;
 	}
 	else

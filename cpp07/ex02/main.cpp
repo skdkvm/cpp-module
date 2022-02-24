@@ -10,7 +10,7 @@ int main(int, char**)
     std::cout << "** Numbers size : " << numbers.size() << std::endl;
 
     int* mirror = new int[MAX_VAL];
-   srand(time(NULL));
+   	srand(time(NULL));
     std::cout << "\n** Set value in numbers & mirror" << std::endl;
     for (int i = 0; i < MAX_VAL; i++)
     {
